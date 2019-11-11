@@ -18,8 +18,8 @@ var orm = {
       })
    },
 
-  update: function(table,col,value,col2,value2,id,cb) {
-    var query = `UPDATE ${table} SET ${col} = ${value}, ${col2} = ${value2} WHERE  id=${id}`;
+  update: function(table,col2,value2,id,cb) {
+    var query = `UPDATE ${table} SET ${col2} = ${value2} WHERE  id=${id}`;
     connection.query(query,function (err,res) {
         if(err) throw err;
         cb(res);

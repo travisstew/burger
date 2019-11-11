@@ -10,12 +10,16 @@ router.get('/',function (req,res) {
   });
 
 router.post('/api/burger',function (req,res) {
-      
-       
       burger.addBurger(req.body.burgerName,function (e) {
         });
         res.end();
 });
+router.put('/api/burger/:id',function (req,res) { 
+    burger.updateBurger(req.body.ate,req.params.id,function (e) {
+        res.json(e);
+        res.end();
+      })
+ })
 
 
 

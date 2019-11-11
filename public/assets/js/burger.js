@@ -12,13 +12,22 @@ $(document).ready(function () {
 
       $.post('/api/burger',burgerData,function(e){
         console.log(e);
-        
       }).then(function () {
           location.reload();
         });
-       
-    
-    
+    });
+
+    $('.devour').on('click','button',function(){
+        var id = $(this).attr('id');
+        var devour = {ate:true};
+        $.ajax({
+          method:'PUT',
+          url: "/api/burger/"+ id,
+          data: devour,
+        }).then(function(e){
+          console.log(e);
+          location.reload();
+        });
     });
 
   

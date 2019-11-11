@@ -3,9 +3,9 @@
   <div class="row">
     <div class="col-sm">
        
-       <ul class="list-group">
+       <ul class="list-group devour">
          {{#each burger}}
-        <li id="{{this.id}}" class="list-group-item">{{this.id}} {{this.burger_name}}  <button type="button" class="btn btn-primary btn-sm float-right">Devoured</button></li>
+        <li  class="list-group-item">{{this.id}} {{this.burger_name}}  <button id="{{this.id}}" type="button" class="devour btn btn-primary btn-sm float-right">Devoured</button></li>
           {{/each}}
        </ul>
     </div>
@@ -14,10 +14,10 @@
 
         <form id="burger-form">
           <div class="form-group">
-          <label for="exampleFormControlTextarea1">Example textarea</label>
+          <label for="exampleFormControlTextarea1">Enter Burger Name</label>
           <textarea class="form-control" id="burger-input" rows="3" ></textarea>
           </div>
-          <button  type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+          <button  type="submit" class="btn btn-primary mb-2">Submit</button>
         </form>
 
       </div>

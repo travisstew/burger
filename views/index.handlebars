@@ -3,10 +3,15 @@
   <div class="row">
     <div class="col-sm">
        
-       <ul class="list-group devour">
-         {{#each burger}}
-        <li  class="list-group-item">{{this.id}} {{this.burger_name}}  <button id="{{this.id}}" type="button" class="devour btn btn-primary btn-sm float-right">Devoured</button></li>
-          {{/each}}
+     <ul class="list-group devour">
+         
+        {{#each burger}}
+            {{#if this.devoured}}
+            {{else}}
+          <li  class="list-group-item ate">{{this.id}} {{this.burger_name}}  <button id="{{this.id}}" type="button" class="devour btn btn-primary btn-sm float-right">Devoured</button></li>
+            {{/if}}
+        {{/each}}
+     
        </ul>
     </div>
     
@@ -24,7 +29,16 @@
         
     </form>
     <div class="col-sm">
-      One of three columns
+    
+           <ul class="list-group devour">
+         
+        {{#each burger}}
+            {{#if this.devoured}}
+          <li  class="list-group-item">{{this.id}} {{this.burger_name}}  </li>
+            {{/if}}
+        {{/each}}
+     
+       </ul>
     </div>
   </div>
 </div>

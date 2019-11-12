@@ -8,7 +8,7 @@
         {{#each burger}}
             {{#if this.devoured}}
             {{else}}
-          <li  class="list-group-item ate">{{this.id}} {{this.burger_name}}  <button id="{{this.id}}" type="button" class="devour btn btn-primary btn-sm float-right">Devoured</button></li>
+          <li  class="list-group-item ate">{{this.id}}.    {{this.burger_name}}  <button id="{{this.id}}" type="button" class="devour btn btn-primary btn-sm float-right">Devoured</button></li>
             {{/if}}
         {{/each}}
      
@@ -18,11 +18,11 @@
       <div class="col-sm">
 
         <form id="burger-form">
-          <div class="form-group">
-          <label for="exampleFormControlTextarea1">Enter Burger Name</label>
+          <div class="form-group text-center ate">
+          <label for="exampleFormControlTextarea1 " >Enter Burger Name</label>
           <textarea class="form-control" id="burger-input" rows="3" ></textarea>
           </div>
-          <button  type="submit" class="btn btn-primary mb-2">Submit</button>
+          <button  type="submit" class="btn btn-primary mb-2 ">Submit</button>
         </form>
 
       </div>
@@ -34,7 +34,7 @@
          
         {{#each burger}}
             {{#if this.devoured}}
-          <li  class="list-group-item">{{this.id}} {{this.burger_name}}  </li>
+          <li  class="list-group-item devoured ate">{{this.id}}.         {{this.burger_name}}  </li>
             {{/if}}
         {{/each}}
      

@@ -1,10 +1,12 @@
+// mysql://b0edb8a497cc4a:da3c3646@us-cdbr-iron-east-05.cleardb.net/heroku_fedf47f604bb52d?reconnect=true
+
 var mysql = require('mysql');
 
 var connection = mysql.createConnection({
-  host: 'localhost',
-  user: "root",
-  password: '',
-  database: 'burgers_db'
+  host: 'us-cdbr-iron-east-05.cleardb.net',
+  user: "b0edb8a497cc4a",
+  password: 'da3c3646',
+  database: 'heroku_fedf47f604bb52d'
 
 });
 

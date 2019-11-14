@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
 });
 
 connection.connect(function(err, res){
-  if(err) throw err;
+  if(err) throw err.code;
   console.log('connected to burgers_db schema');
   
 });

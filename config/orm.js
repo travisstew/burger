@@ -7,10 +7,7 @@ var orm = {
       connection.query(query,function (err, res) {
         if(err) throw err;
             cb(res);
-        }).catch(function (err) {
-          console.log(err);
-          
-          });
+        });
     }
     ,
   insertOne: function(table,col,col2,val,val2,cb) { 

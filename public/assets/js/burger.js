@@ -2,6 +2,7 @@ $(document).ready(function () {
   
   $('#burger-form').on('submit', function (event) {
         event.preventDefault();
+        if($('#burger-input').val().length !== 0){
       var burgerName = $('#burger-input').val().trim();
       var ate = false;
 
@@ -15,6 +16,7 @@ $(document).ready(function () {
       }).then(function () {
           location.reload();
         });
+      }
     });
 
     $('.devour').on('click','button',function(){

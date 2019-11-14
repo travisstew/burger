@@ -12,13 +12,6 @@ var mysqlConfig = {
 var connection = mysql.createConnection(mysqlConfig);
 handleDisconnect(connection);
 
-
-// connection.connect(function(err, res){
-//   if(err) throw err.code;
-//   console.log('connected to burgers_db schema');
-  
-// });
-
 function handleDisconnect(client) {
   client.on('error', function (error) {
     if (!error.fatal) return;

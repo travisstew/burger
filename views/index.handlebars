@@ -8,7 +8,7 @@
         {{#each burger}}
             {{#if this.devoured}}
             {{else}}
-          <li  class="list-group-item ate">{{this.id}}.    {{this.burger_name}}  <button id="{{this.id}}" type="button" class="devour btn btn-primary btn-sm float-right">Devoured</button></li>
+          <li  class="list-group-item ate"> {{this.burger_name}}  <button id="{{this.id}}" type="button" class="devour btn btn-primary btn-sm float-right">Devoured</button></li>
             {{/if}}
         {{/each}}
      
@@ -34,7 +34,7 @@
          
         {{#each burger}}
             {{#if this.devoured}}
-          <li  class="list-group-item devoured ate">{{this.id}}.         {{this.burger_name}}  </li>
+          <li  class="list-group-item devoured ate">      {{this.burger_name}}  </li>
             {{/if}}
         {{/each}}
      

@@ -29,9 +29,9 @@ function handleDisconnect(client) {
     // NOTE: This assignment is to a variable from an outer scope; this is extremely important
     // If this said `client =` it wouldn't do what you want. The assignment here is implicitly changed
     // to `global.mysqlClient =` in node.
-    mysqlClient = mysql.createConnection(client.config);
+     connection = mysql.createConnection(client.config);
     handleDisconnect(mysqlClient);
-    mysqlClient.connect();
+    connection.connect();
   });
 };
 module.exports = connection;

@@ -10,7 +10,7 @@ var mysqlConfig = {
 
 };
 var connection = mysql.createConnection(mysqlConfig);
-handleDisconnect(mysqlClient);
+handleDisconnect(connection);
 
 
 // connection.connect(function(err, res){
